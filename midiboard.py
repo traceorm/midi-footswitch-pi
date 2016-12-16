@@ -4,6 +4,7 @@ import rtmidi #wird für midi benötigt
 GPIO.setmode(GPIO.BCM)
 #GPIOs need to be setup up
 
+### Konfiguration
 
 #Saveing GPIO Pin Nimbers for each switch here as Constant
 # switch top left to right
@@ -22,6 +23,10 @@ S4_B = 18
 
 #panic button to end programm // wichtig weil hardware gesteuert
 PANIC = 8
+
+
+#später vielleicht aus datei lesen?
+bar = 0 
 
 
 #Setting up GPIO
@@ -47,6 +52,14 @@ GPIO.setup(PANIC, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 
 #define functions for each switch to be triggerd by interrupts
 
+
+
+
+
+### Methoden, welche das Senden aufrufen
+## werden ggf einen switch / elifchain brauchen für die bar
+
+
 #top buttons
 def s0_tHit():
     #do midi stuff here
@@ -62,8 +75,9 @@ def s3_tHit():
     #do midi stuff here
 
 def s4_tHit():
-    #do midi stuff here
-
+    #kein midi stuff hier, nur inkrementieren der bar variable und aufrufen der led-funktion.
+    bar += 1
+    setLEDbar()
 
 #bottom buttons
 def s0_bHit():
@@ -79,7 +93,13 @@ def s3_bHit():
     #do midi stuff here
 
 def s4_bHit():
-    #do midi stuff here
+    #kein midi stuff hier, nur inkrementieren der bar variable und aufrufen der led-funktion.
+    bar -= 1
+    setLEDbar()
+
+
+def setLEDbar():
+	## hier leds in abhängigkeit der bar setzen.
 
 
 #define all interrupt funktions on GIOP level. We need two for each switches
@@ -158,6 +178,8 @@ GPIO.add_event_detect(S4_B, GPIO.RISING, callback=s4_bRising, bouncetime=300)
 
 
 
+
+#alles interuppt gesteuert, also kann auf hardware off gewartet werden, um endlos loop zu verhindern
 
 try:
     print "Programm ends on Panic Switch"
