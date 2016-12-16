@@ -1,0 +1,81 @@
+%Template für Kapitel
+%Da als Dokumentenklasse Report gewählt wurde und für den Report 'Chapter' die höchste Gliederungsstufe darstellt, beginnt jedes Kapitel mit Chapter.
+\chapter{Theorie und Recherche}
+\label{chap:theorieundrecherche}
+
+Bevor die Projektanalyse stattfinden kann, ist eine Einarbeitung in die Thematik nötig. Diese verhindert spätere Unklarheiten, so das in der Entwicklungsphase auch wirklich entwickelt werden kann und diese nicht immer wieder durch Recherchen unterbrochen wird. 
+
+Grundlegende Element des Fußschalters wird die Kommunikation über das MIDI-Protokoll sein, weshalb es zunächst theoretisch behandelt wird. Neben dem Protokoll werden allerdings auch die anderen Aspekte des Projektes betrachtet, bevor es an die Durchführung des Projekt geht.
+
+\section{Musical Instrument Digital Interface}
+\label{section:midi}
+Die in der Musikszene zumeist benutzte Abkürzung MIDI, steht für \emph{Musical Instrument Digital Interface}, frei ins Deutsche übersetzt bedeutet das soviel wie \emph{digitale Schnittstelle zwischen Instrumenten}. Das MIDI-Protokoll bietet also eine Möglichkeit Musik digital zu beschreiben. Allerdings ist damit nicht die Digitalisierung vom analogen Klang gemeint, wie sie bei Aufnahmen benötigt wird. Sinn des Protokolls ist es viel mehr einen Industriestandart bereitzustellen, der beschreibt, wie elektronische Geräte im Musikumfeld miteinander kommunizieren und sich auf diese Weise steuern können. Der Standard umfasst dabei nicht nur das Kommunikationsprotokoll sondern auch Hardwarespezifikationen, die von den Geräten erfüllt werden müssen um als MIDI-Gerät zu gelten. Die genauen Spezifikationen können, auf der  \href{https://www.midi.org/specifications}{Webseite der MIDI Manufacturers Assoziation} nach kostenloser Registrierung eingesehen und heruntergeladen werden. 
+%http://educypedia.karadimov.info/library/The_MIDI_Specification.pdf
+
+Die Spezifikationen für MIDI sind im Laufe der Zeit sehr umfangreich geworden. Längst gehen sie über einfache, kabel-gebundene Anwendungen hinaus und unterstützen z.B. auch Bluetooth LE\index{Bluetooth}, sogar ein IEEE\index{IEEE} MIDI Standard existiert. Auf diese Variationen wird im Folgenden jedoch nicht eingegangen, das diese im Rahmen des Projektes nicht benötigt werden und somit den Umfang der Seminararbeit überschreiten würde.  
+
+\subsection{Historisches}
+
+\subsection{Hardware}
+
+Die vom MIDI-Standard benötigte Hardware lässt sich im wesentlichen in fünf Kategorien unterteilen. Diese sind im folgenden, beispielhaften Signalflussplan von der Signalerzeugung bis zum erklingen des Tons dargestellt.
+
+
+
+unbedingt auf eingabegeräte und Expander eingehen, Kanäle, Baudrate (formel!) und so
+
+\subsection{Kommunikations-Protokoll}
+Unter dem Kommunikations-Protokoll versteht man die MIDI-Nachrichten oder Befehle, welche z.B. an MIDI-Expander gesendet werden können. Es gibt laut den Spezifikation verschiedene Nachrichtentypen, gemeinsam haben jedoch fast alle den grundlegenden Aufbau aus 3 aufeinander folgenden Bytes. Einem Statusbyte, welches die Art des Befehl und den MIDI-Kanal n bestimmt, und zwei Datenbytes, welche Werte von 0 bis 127 annehmen können. Manche Befehle benötigen auch nur 2 Bytes, hier fehlt dann das zweite Datenbyte. Um Redundante Informationen zu verhindern, kann auf das Statusbyte verzichtet werden, sofern es sich zur letzten Nachricht nicht verändert hat. Wichtig ist, dass Statusbytes immer mit einer 1 und Datenbytes immer mit einer 0 beginnen.
+
+Die verschiedenen Befehle und ihr Aufbau sind in der nachstehenden Tabelle verdeutlicht.
+
+
+\begin{table} %tabelle aller befehle wenn möglich noch in höhe zentrieren, und a, b ggf durch die standard dinger ersetzen je nach inhalt des standards 
+	
+	\begin{tabular}{C{0.15\textwidth}|C{0.15\textwidth}|C{0.15\textwidth}|L{0.45\textwidth}}
+		\textbf{ Statusbyte}  & \textbf{Databyte} 1 & \textbf{Databyte 2} & \textbf{Beschreibung}\\ 
+		\hline 
+		8m & a  &  b & \textbf{Note Off} - Mit diesem Befehl wird das Spielen einer Note beendet, a gibt dabei die Note an, b die Geschwindigkeit, mit der die Note beendet wird.\\
+		\hline 
+		9m & a  &  b & \textbf{Note On} - Mit diesem Befehl wird das Spielen einer Note begonnen, a gibt dabei die Note an, b die Anschlagstärke, mit der die Note gespielt wird.\\
+		\hline 
+		Am & a  &  b & \textbf{Ployphonic Aftertouch} - Ändert das Klangbild einer Note a währemd sie gespielt wird. Dies kann z.B. eine Änderung des Instrument sein\\
+		\hline 
+		Bm & a  &  b & \textbf{Control Change} - Ändert die Intensität b bestimmter Controller b die für das Instrument spezifisch sein können\\
+		\hline 
+		Cm & a  &   & \textbf{Programm Change} - Ändert das aktuelle Instrument, kein zweites Datenbyte nötig\\
+		\hline 
+		Dm & a  & b  & \textbf{Monophonic Aftertouch} - wie Polyphonic Aftertouch nur für alle gespielten Noten gleichzeitig\\
+		\hline 
+		Em & a  & b  & \textbf{Pitch Bending} Kombiniert b und a um eine Tonhöhenveränderung zu signalisieren\\
+		\hline 
+		Fm & a  & b  & \textbf{Pitch Bending}Raum für Steuermeldungen, die von Gerät zu Gerät variieren können.\\
+	\end{tabular}
+	\caption[Tabelle über MIDI-Befehle]{Beschreibende Tabelle über alle MIDI-Befehle, mit MIDI-Kanal $m\in\left[ 0,F \right]$, Datenbyte 1 mit $a\in\left[ 00,FF \right]$ und Datenbyte 2 mit $b\in\left[ 00,FF \right]$}
+	\label{theorie:befehle}
+
+\end{table}
+
+
+\subsection{Weitere Möglichkeiten}
+%Hier dann bitte Python und Raspi anschneiden.
+
+\section{Grandmeister 36 und das MIDI-Protokoll}
+
+Nebst der Theoretischen Grundlage über das MIDI-Protokoll galt es herauszufinden, wie der Verstärker mit MIDI-Befehlen umgeht. Dieses Wissen bildet wird benötigt umdas Programm des Fußschalters zu schreiben.  
+
+\subsection{MIDI-Kanal}
+Der Verstärker ist laut \href{http://hughes-and-kettner.com/wp-content/uploads/2014/03/BDA_GrandMeister_1_4_7spr.pdf}{Bedienungsanleitung} zunächst in einem "Omni On" eingestellt, das heißt er betrachtet das Nibbel welches den MIDI-Kanal angibt gar nicht und reagiert einfach immer. Dies ist natürlich praktisch für einen schnellen Start, jedoch problematisch wenn man mehrere MIDI-Geräte parallel benutzt. Diese Einstellung kann jedoch geändert werden. Für den Bau des Fußschalters bedeute dies, dass auch bei diesem der MIDI-Kanal frei gewählt werden kann.
+
+\subsection{Programm Change}
+Aus dem \emph{ Kapitel 2.4 Programmierung} der  \href{http://hughes-and-kettner.com/wp-content/uploads/2014/03/BDA_GrandMeister_1_4_7spr.pdf}{Bedienungsanleitung} des Verstärkers geht hervor, dass der \emph{Grandmeister 36} die aktuellen Einstellungen mit Hilfe von MIDI-Programm-Changes auf 128 Speicherplätze verteilen kann. Durch den vorherigen Abschnitt \ref{section:midi}, welcher sich in der Tabelle \ref{theorie:befehle} mit den vorhandenen MIDI-Befehlen auseinander setzt, ist ersichtlich, dass die 128  Speicherplätze offensichtlich über den Parameter des Programm-Change Befehls adressiert werden können. Dieses Wissen ist geeignet um später auf Knopfdruck die richtigen Befehle zu versenden.  
+\subsection{MIDI-Controller}
+
+Des weiteren versteht der Grandmeister 36 neben den Pogramm-Change Befehlen noch einen Satz der Befehle, welche aus aus Tabelle \ref{theorie:befehle} bekannt sind. Dies sind die Befehle der Kategorie Control-Change. Diese sind in der  \href{http://hughes-and-kettner.com/wp-content/uploads/2014/03/BDA_GrandMeister_1_4_7spr.pdf}{Bedienungsanleitung} etwas besser dokumentiert und entfalten enorme Konfigurations-Möglichkeiten. Nahezu jede Einstellung des Verstärkers stellt einen MIDI-Controller dar und lässt sich als solcher über das MIDI-Protokoll in Echtzeit verändern, dies könnte weitreichende Möglichkeiten bringen. Hier wird beim vorhandenen Fußschalter Potential verschenkt, weil mit diesem nur 2 der 25 existenten MIDI-Controller gleichzeitig angesprochen werden können.     
+
+
+
+\section{Raspberry-Pi}
+
+\section{Python}
+

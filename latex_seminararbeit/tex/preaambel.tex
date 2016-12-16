@@ -1,0 +1,50 @@
+%%Benötigte Pakete
+
+%utf8encoding für Umlaute und Ähnliches
+\usepackage[utf8]{inputenc}  
+\usepackage[english,ngerman]{babel}
+
+%Paket zum Setzen der Ränder
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+
+
+
+
+%wird laut Braun benötigt, für ordentliche PDF-Ausgabe, macht bis jetzt keinen Unterschied.
+%\usepackage[T1]{inputenc}
+
+
+%Paket für Bilder
+\usepackage{graphicx}
+%konfiguriere den Pfad wo Latex nach Bildern suchen soll. Mehrere Pfade in weiteren Klammern möglich!
+\graphicspath{ {bilder/} }
+
+\usepackage{float}
+
+
+
+
+%Paket für SI-Einheiten, weil Einheiten sind dein Freund
+\usepackage{siunitx}
+
+%paket zum Anzeigen von Quellcode
+\usepackage{listings}
+
+%paket zum Einfügen von Hyperlinks
+\usepackage{hyperref}
+
+%paket zur Manipulation von Spaltengrößen, mit Textausrichtung, da der tabular Parameter p{} die Parameter l,c,r ausschließt.
+
+\usepackage{tabularx}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}} % linksbündig mit Breitenangabe
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}} % zentriert mit Breitenangabe
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}} % rechtsbündig mit Breitenangabe
+
+%auf a4 nehmt ihr immer 11pt ok?
+
+
+
+%%Einfügen des Pakets makeidx und erstellen des Index
+%ACHTUNG KONFLIKT GEFAHR mit dem build Ordner. 
+\usepackage{makeidx}
+\makeindex

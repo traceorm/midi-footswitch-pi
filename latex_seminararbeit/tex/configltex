@@ -1,0 +1,10 @@
+%Dokumentkonfiguration 
+%setzen der Autorinformation
+\newcommand{\docAutor}{Martin Kretschmer}
+
+
+%Übertitel des Dokuments
+\newcommand{\docUeberTitel}{Seminararbeit im Rahmen des nichttechnischem Wahlfachs 'Wissenschaftliche Texte mit \LaTeX ' }
+
+%Titel des Dokuments
+\newcommand{\docTitel}{Bau Fußschalter Grandmeister 36}

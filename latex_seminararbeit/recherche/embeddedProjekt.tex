@@ -1,0 +1,201 @@
+\documentclass[10pt,a4paper]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[german]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{makeidx}
+
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\author{Martin Kretschmer}
+\title{Entwicklung eines MIDI basierten Fußschalters für den Gitarrenverstärker "Tubemeister 36"}
+\date{}
+\makeindex
+\begin{document}
+
+\maketitle
+
+
+\tableofcontents
+
+\chapter{Projektdefinition}
+
+
+
+\section{Einleitung und Problembeschreibung}
+
+\begin{flushleft}
+
+
+Jeder Gitarrist steht vor der Herausforderung, aus seinem Instrument das Maximum an Sound heraus zu holen. Dazu werden verschiedene Ansätze verfolgt. Der gängigste Ansatz ist das gezielte Verzerren des Gitarrensignals durch Effekt-Geräte, welche zwischen Gitarre und Verstärker, und per Fußschalter an und aus geschaltet werden. Diese erzeugen zumeist hervorsagende Klänge, jedoch haben Sie entschiedene Nachteile. Möchte man mehr als einen Effekt gleichzeitig anschalten wird dieser Versuch oft zur unkontrollierten Tanzeinlage. Ist das Lied schnell, kommt es vor, dass der Effekt erst nach Beginn des entsprechenden Takts erklingt. Des Weiteren können einige Effekt-Geräte über zusätzliche Potentiometer konfiguriert werden. Ein Ändern dieser Einstellungen während eines Liedes ist nahezu unmöglich.
+
+Abhilfe können hier Verstärker schaffen, welche über ihren eigentlichen Zweck hinaus gehen, und verschieden Kanäle für unterschiedliche starke Verzerrungen besitzen, oder aber verschiedene Effekte an Bord haben. Das bloße Auslagern der Efekte in den Verstärker bietet hier offensichtlich noch keinen Mehrwert. Erst durch das Speichern einer bestimmten Verstärkerkonfiguration, sowie das anschließende Laden diese auf Knopfdruck, lassen sich mehrere Effekte gleichzeitig anschalten.
+
+Dies geschieht bei meinem Tubmeister 36 über das MIDI-Protokoll \index{MIDI}. Einen solchen Fußschalter besitze ich allerdings nicht. Es erscheint jedoch im Bereich meiner Möglichkeiten eine Microcontroller gestützte Schaltung, so wie ein entsprechendes Programm zu entwerfen, die die Funktion eines solchen Fußschalters umsetzt. 
+\end{flushleft}
+
+\section{Motivation zur Durchführung}
+
+\begin{flushleft}
+
+
+Meine Motivation ist eine Eigenbau-Lösung für die genannte Problemstellung zu finden. Dies bietet gleich mehrere Möglichkeiten. Zum einen ist man nicht auf den Entwurf der Hersteller angewiesen, sondern kann sich die Hardware nach funktionalen aber auch ästhetischen Gesichtspunkten gestalten wie man möchte. Zum anderen hat man die gleichen Freiheiten in der Software, und kann sich vielleicht sogar Funktionen schreiben, die noch besser auf die eigenen Bedürfnisse passen. Außerdem glaube ich, dass es sich hierbei um ein Projekt handelt, an dem ich meine theoretischen Kenntnisse aus dem Studium praktisch vertiefen und so noch einiges Lernen kann.
+
+\end{flushleft}
+\section{Projektziele}
+
+\begin{flushleft}
+
+Im folgenden werden die Zeile des Projekts formuliert. Sollte eins dieser Ziele nicht erfüllt werden, ist das Projekt als gescheitert anzusehen. Sollte dies geschehen muss in die Analysephase zurückgekehrt werden um zu evaluieren, ob das Projekt unter anderen Zielsetzungen noch erfolgreich sein kann, oder ob eine Weiterführung nicht statt findet.
+
+\end{flushleft}
+
+\subsection{Sachziel}
+\begin{flushleft}
+
+Grundlegendes Sachziel des Projekt ist es, eine Microcontroller basierte Schaltung, so wie ein entsprechendes Grundprogramm zu erstellen, welche in Kombination in der Lage sind MIDI-Befehle so an den Verstärker zusenden, so dass dieser damit Konfigurationen speichern und Laden kann. Eine genaue Definition der Soll- und Kann-Ziele wird in der Analysephase gefunden. 
+\end{flushleft}
+\subsection{Kostenziel}
+\begin{flushleft}
+
+Damit sich das Projekt auch wirtschaftlich einigermaßen lohnt, sollten zumindest die Materialkosten unter dem Preis eines neu angeschafften Fußschalters der Firma Hughes \& Kettner bleiben.  
+
+\end{flushleft}
+
+
+\subsection{Terminziel}
+
+\begin{flushleft}
+
+Da es sich hierbei um ein Embedded-Projekt bei Professor Scharschmidt (? wtf wird der geschrieben) handelt, muss es auch bis zur Prüfungsphase des Sommersemesters 2016 durchgeführt worden sein, da andernfalls eine Prüfung nicht stattfinden kann. Terminziel ist daher der 08.07.2016, da zu diesem Zeitpunkt die Vorlesungen des Sommersemesters enden.
+
+\end{flushleft}
+
+
+\section{Platzhalter für alles was noch zur defintion fehlt}
+
+\chapter{Planung und Vorgehensmodel}
+\section{Meilensteine}
+%da es sich um ein Studienprojekt handelt, das neben dem Studium, keine genauen Zeitvorgaben, jedoch Setzung von Meilensteinen, um zu gewährleisten das irgendwas von wegen in einander greifend, aber abhängig und so
+
+\subsection{Abschluss Analyse}
+\subsection{Abschluss Planung}
+\subsection{Abschluss Durchführung}
+\subsection{Abschluss Validierung}
+\subsection{Abschluss Dokumentation}
+
+\chapter{Analyse und Zielsetzung}
+
+\begin{flushleft}
+
+Um das Projekt ziel-bringend umzusetzen, soll eine vorangestellte Analyse klären welche Voraussetzungen gegeben sind, welche möglichen Hürden es zu bewältigen gibt und welche Ziele mit welcher Priorität erreicht werden sollen.
+
+Unterschieden wird dabei in jedem Fall zwischen sachliche und persönliche Aspekten. Die Sachlichen Aspekte betreffen direkt das Projekt oder die Umsetzung. Die persönlichen in erster Linie den eigenen Wissensstand, der zur Umsetzung des Projekts notwendig ist, sowie sekundär auch persönliche Vorlieben die etwa als Kann-Ziel auf die Durchführung des Projekts Einfluss nehmen können. 
+
+\end{flushleft}
+
+\section{Ist-Zustand}
+
+Der Ist-Zustand stellt die Ausgangssituation dar, auf welcher aufgebaut wird. 
+
+	\subsection{Sachlich}
+	\begin{flushleft}
+	Vorhanden sind nur ein altes MIDI-Kabel und ein MIDI-Keyboard, welche eventuell genutzt werden kann um die Implementierung des MIDI-Protokolls zu unterstützen. Als Microcontroller könnte ein Arduino Leonardo genutzt werden, da er derzeit keinen anderen Zweck hat. Außerdem kann auf den eingangs erwähnten Verstärker "Tubmeister 36" zugegriffen werden, schließlich geht es ja um diesen. 
+	\end{flushleft}
+	\subsection{Persönlich}
+	\begin{flushleft}
+Durch das Studium der Informationstechnik an der HSD, so wie der Ausbildung zum Fachinformatiker, habe ich bereits einiges an Wissen erworben, welches mir in diesem Projekt hilfreich sein kann. Darunter Grundlagen der Elektrotechnik, Bauelemente und Schaltungstechnik so wie die Programmierung in der Programmiersprache C. Zusätzlich sind außerhalb des Studiums Erfahrungen am Arduino gesammelt worden, so dass der Umgang mit der IDE leicht fällt. Diese ist auch schon auf meinem Linux-System installiert und funktionsfähig.
+	\end{flushleft}
+\section{Soll-Zustand}
+
+Der Soll-Zustand spiegelt wieder was unbedingt bewältigt werden muss um das Projekt nicht als gescheiter zu bezeichnen.
+
+	\subsection{Sachlich}
+	\begin{flushleft}
+	An den vorhandenen Arduino sollen mehrere Fußschalter angeschlossen werden um möglichst viele Voreinstellungen am Verstärker mit einem einzigen Fußtritt erreichen zu können. Ziel ist es dabei einen Vorteil gegenüber dem komerziellen Produkt zu schaffen, wo lediglich vier Einstellungen ohne Umstellung der Speicherbank, das heiß mit einem einzigen Fußtritt aktiviert werden können.
+	Das Konzept der Speicherbänke soll allerdings nicht ganz verworfen sondern auch umgesetzt werden. Als Indikator welche Speicherbank gewählt ist, werden LED genutzt, die die aktuelle Bank binär anzeigen. Die Spannungsversorgung für das System muss geklärt werden.
+	Der Arduino soll ein Programm ausführen, welches in der Lage ist, die richtigen MIDI-Befehle an den Verstärker zusenden, auch soll es in der Lage sein die genannten Bänke umzuschalten. Das Programm sollte möglichst modular verfasst und gut kommentiert sein, um spätere Anpassungen leicht zu realisieren.  
+	\end{flushleft}
+	\subsection{Persönlich}
+	\begin{flushleft}
+	Um das Projekt erfolgreich durchzuführen, muss ich mir zunächst Wissen aneignen. Dies umfasst zum einen kleinere Recherchearbeiten hinsichtlich des Tubmeister 36, etwa ob die Firma etwas über die Art und Weise wie sie das MIDI-Protokoll einsetzt öffentlich dokumentiert, oder ob sie andere Informationen preisgibt, die die Arbeit beeinflussen können. Wichtiger als die Recherchearbeiten hinsichtlich des Verstärkers ist jedoch die Wissensaneignung über das MIDI-Protokoll. Nur wenn das MIDI-Protokoll verstanden wird, kann es auch auf dem Mikro-Controller implementiert werden. Außerdem wird etwaiges Raten der Befehle vereinfacht wenn man einige MIDI-Befehle sofort ausschließen kann.
+	\end{flushleft}
+\section{Kann-Zustand}
+
+Das Erreichen des Kann-Zustands ist für die erfolgreiche Durchführung des Projekts nicht notwendig. Es handelt sich hierbei eher um ästhetische Ziele, nicht aber um funktionelle. Angestrebt werden die Ziele natürlich ebenso, jedoch sollten diese hinsichtlich des Zeitaufwands realistisch eingeschätzt werden, so dass sie andere Fächer und Projekte nicht blockieren.
+	\subsection{Sachlich}
+
+	Die binäre Anzeige der Speicherbänke aus dem Soll-Zustand können durch RGB-LED-Streifen ersetzt werden, so dass es anstelle von nummerierten, farbige Bänke gibt. Die Binär-Codierung kann dafür weiter Verwendung finden. So kann man jeder Grundfarbe aus RGB eine Wertigkeit $2^{0}$ , $2^{1}$, $2^{2}$ zuordnen. Die Grundfarben lassen sich dann über Transistoren schalten. Dabei muss eine Anpassung der Spannungsversorgung erfolgen, da die LED-Streifen mit 12 Volt, der Arduino aber mit 5 Volt arbeitet.
+	
+	\subsection{Persönlich}
+
+Persönliche Kann-Ziele gibt es keine mehr, lediglich mein Wissen über Spannungsversorgungen sollte etwas aufgefrischt werden.
+
+
+\chapter{Durchführung}
+\section{Recherche und Wissensaneignung}
+
+\section{Test-Hardware und Testversuche}
+
+\subsection{MIDI am Arduino}
+
+\subsection{MIDI-Befehle des Tubmeisters 36}
+\begin{flushleft}
+
+Aus der voraus gegangen Recherche ergaben sich einige Informationen über die MIDI-Befehle die der Grandmeister 36, also ein leistungsstärker Verwandter des Tubemeisters 36  versteht, jedoch wurden in der Quelle eher die direkte Ansteuerung einzelner Einstellungen wie Gain, Volume oder Kanalwechsel behandelt. Dies war zwar eine interessante Information und sicher auch einen Test wert, ob der Tubemeister 36 dies auch unterstützt, lag aber nicht im primären Fokus des Projektes. Folglich mussten, durch ein gezieltes Testverfahren, die Befehle ermittelt werden, welche der Verstärker zum speichern einer Voreinstellung akzeptiert. 
+\subsubsection{Ermitteln der Befehle mit Hilfe des General-MIDI-Keyboards}
+Anstelle nach dem Brute-Force Prinzip alle möglichen MIDI-Befehle vom Arduino an den Verstärker zu senden, wurde erneut das Gerneral-MIDI-Keyboard verwendet, diesmal im MIDI-Out-Modus. Da jede Funktion des Keyboards mit einem MIDI-Befehl assoziiert ist, wird auch bei jedem Tastendruck (mit Ausnahme von An, Aus, Menuführung etc. ), ein MIDI-Befehl an den Ausgang und über das Kabel direkt an den MIDI-Eingang des Verstärkers gesendet. Nach Aktivierung des "MIDI Learn"-Schalters wurden solange verschiedene Tastentypen auf dem Keyboard gedrückt, bis der Schalter durch ein hörbares Klacken umgeschaltet und der Befehl vom Verstärker akzeptiert worden war. 
+Einziges Hindernis war dabei, dass Keyboard, und Verstärker zunächst auf unterschiedlichen MIDI-Kanälen sprachen bzw hörten. So führte die Erste Testrunde zu keinem Ergebnis. Nach dem das Keyboard allerdings von Kanal 1 auf Kanal 0 umgestellt wurde, konnte ein ein gültiger Befehl an den Tubemeister 36 übertragen werden. 
+
+Auf dem Keyboard wurde dazu eine Taste zum Instrumentwechsel gedrückt. Dieser Instrumentenwechsel wird nach General-Midi auch "Program Change" genannt. Der zugehörige Befehl ist zwei Byte lang und wie folgt aufgeteilt:
+
+\end{flushleft}	
+\begin{center}
+
+
+\begin{tabular}{c|c}
+
+Statusbyte & Databyte \\ 
+\hline 
+1100 0000 & 0000 1001 \\ 
+\hline 
+Cn & pp \\ 
+
+\end{tabular} 
+
+
+
+
+\end{center} 
+\begin{flushleft}
+
+wobei 0xC angibt, dass es sich um ein Statusbyte (erstes Bit 1), konkret ein "Program Change"-Byte handelt, n den Kanal definiert, diesem Fall also 0x0. pp wiederum steht für ein Datenbyte (erstes Bit 0), welches das zuspielende Instrument von 0-127 definiert. 
+
+Somit ist auch ersichtlich warum der Tubemeister 36 genau 128 Voreinstellungen speichern kann.
+
+Zur Validierung wurde nun ein kurzer Code für den Arduino geschrieben, welcher zwei Byte nach dem genannten Schema an den Verstärker sendete und dieser sprang tatsächlich auf die zuvor mit dem Keyboard gelernte Voreinstellung um.
+
+\subsubsection{Bewertung der Vorgehnsweise}
+Dadurch, dass das Keyboard als eine Art Monitor genutzt werden konnte wurde die Arbeit enorm erleichtert, ohne das Keyboard wäre die Ermittlung der Befehle ungleich schwerer gewesen. In diesem Fall hätte man für jeden der 15 MIDI-Kanäle alle 8 verschieden MIDI-Befehle ausprobieren müssen. Dies wären zwar nur 120 verschiedene Statusbytes gewesen, welche dazu auch noch mit einer for-schleife leicht zu generieren sind. Jedoch bedürfen verschiedene Statusbyte verschiedener Datenbytes was die Generierung verkompliziert, außerdem hätte man sich noch einen Monitor, z.B. aus LEDs bauen müssen, um den aktuellen MIDI-Befehl zu sehen. Aber auch das wäre möglich gewesen.
+
+
+\end{flushleft}
+
+\subsection{Ergebnisse}
+
+
+\section{Erstellen der Hardware}
+\subsection{Minimale Anforderung}
+\subsection{Maximale Anforderung}
+\section{Erstellen der Software}
+\subsection{Minimale Anforderung}
+\subsection{Maximale Anforderung}
+
+\chapter{Validierung}
+
+\chapter{Fazit und Aussicht}
+
+\chapter{Schlagwortregister}
+\printindex
+\end{document}
+
+}
+

@@ -1,0 +1,40 @@
+%Template für Kapitel
+%Da als Dokumentenklasse Report gewählt wurde und für den Report 'Chapter' die höchste Gliederungsstufe darstellt, beginnt jedes Kapitel mit Chapter.
+\chapter{Analyse}
+
+
+
+Um das Projekt ziel-bringend umzusetzen, soll eine vorangestellte Analyse klären, welche Voraussetzungen gegeben sind, welche möglichen Hürden es zu bewältigen gibt und welche Ziele mit welcher Priorität erreicht werden sollen.
+
+Unterschieden wird dabei in jedem Fall zwischen sachliche und persönliche Aspekten. Die Sachlichen Aspekte betreffen direkt das Projekt oder die Umsetzung. Die persönlichen in erster Linie den eigenen Wissensstand, der zur Umsetzung des Projekts notwendig ist, sowie sekundär auch persönliche Vorlieben die etwa als Kann-Ziel auf die Durchführung des Projekts Einfluss nehmen können. 
+
+
+
+\section{Ist-Zustand}
+
+
+Derzeit liegt nur originale Fußschalter als Referenz vor. Dieser ist jedoch im Funktionsumfang limitiert. So unterstützt er nur zwei separate Modi. Den so genanten Stomp-Mode, und den Preset-Mode. Letzterer benutzt die Schalter A-D um vier der 128 programmierbaren Voreinstellungen zu adressieren. Über zwei weitere Schalter lassen sich die 32 Speicherbänke auswählen, so das von A1 bis D32 alle 128 Voreinstellungen angesprochen werden können. Im Stomp-Mode kann mit den Schaltern A - D der Grad der Verzerrung eingestellt werden. A steht dabei für Clean, B für Crunch, C für Lead und D für Ultra. Neben diesen Schaltern können noch die Modulation, Delay und Boost {\LARGE IST DAS SO?} über weitere Schalter an und abgeschaltet werden. Diese Funktionen werden jedoch im Preset-Mode nicht mehr unterstützt. Dies kann durchaus unpraktisch sein, sofern man sich zum Beispiel im Proberaum in einer kreativen Phase befindet, welche allerdings immer wieder durch den Gang zum Verstärker unterbrochen wird um neue Einstellungen auszuprobieren.   
+
+Vorhanden ist ebenfalls ein Raspberry Pi der dritten Generation, sowie ein USB zu MIDI -Kabel, und einige 3PDT-Fußschalter.
+	
+\section{Soll-Zustand}
+
+Der Soll-Zustand spiegelt wieder, was unbedingt bewältigt werden muss, um das Projekt nicht als gescheitert zu bezeichnen.
+
+	\subsection{Sachlich}
+
+	An den vorhandenen Raspberry Pi sollen mehrere Fußschalter angeschlossen werden um möglichst viele Voreinstellungen am Verstärker mit einem einzigen Fußtritt erreichen zu können. Ziel ist es dabei einen Vorteil gegenüber dem kommerziellen Produkt zu schaffen, wo lediglich vier Einstellungen ohne Umstellung der Speicherbank, also mit einem einzigen Fußtritt aktiviert werden können.
+	Das Konzept der Speicherbänke soll allerdings nicht ganz verworfen sondern auch umgesetzt werden. Als Indikator welche Speicherbank gewählt ist, sollen LEDs genutzt werden, um die aktuelle Bank binär anzuzeigen.
+	Der Raspberry soll ein Programm ausführen, welches in der Lage ist, die gewünschten MIDI-Befehle an den Verstärker zusenden, dabei sollen Stomp-Mode und Preset-Mode so gut es geht verfunden werden. Das Programm ist möglichst modular zu verfassen und soll gut kommentiert sein, um spätere Anpassungen leicht zu realisieren. 
+	 
+
+
+
+\section{Kann-Zustand}
+
+Das Erreichen des Kann-Zustands ist für die erfolgreiche Durchführung des Projekts nicht notwendig. Es handelt sich hierbei eher um ästhetische Ziele, nicht aber um funktionelle. Angestrebt werden die Ziele natürlich ebenso, jedoch sollten diese hinsichtlich des Zeitaufwands realistisch eingeschätzt werden.
+
+	\subsection{Sachlich}
+
+	Die binäre Anzeige der Speicherbänke aus dem Soll-Zustand können durch RGB-LED-Streifen ersetzt werden, so dass es anstelle von nummerierten, farbige Bänke gibt. Die Binär-Codierung kann dafür weiter Verwendung finden. So kann man jeder Grundfarbe aus RGB eine Wertigkeit $2^{0}$ , $2^{1}$, $2^{2}$ zuordnen. Die Grundfarben lassen sich dann über Transistoren schalten. Dabei muss eine Anpassung der Spannungsversorgung erfolgen, da gebräuchliche LED-Streifen mit 12 Volt, der Raspberry Pi aber mit 5 Volt arbeitet.
+	

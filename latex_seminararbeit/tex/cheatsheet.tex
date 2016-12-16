@@ -1,0 +1,212 @@
+%%cheatsheet für latex
+
+
+\subsection{Leerzeichen}
+Manche Befehle verschlucken Leerzeichen:
+\\
+\LaTeX z.B. \\
+\LaTeX \ ein Slash behebt dies.
+
+\subsection{Bindestriche}
+
+-- und - und ----- sind unterschiedlich
+
+\section{Formatierung}
+
+\subsection{Chars}
+umlaute siehe Präambel, ü, ö, ß
+Sonderzeichen mit Backslash escapen, oder eben nicht, einfach ausprobieren
+
+@ \% \_ \{ \}
+
+\subsection{logische und physische Formatierung}
+
+
+%physische Formatierung
+\textbf{Fetter Text}
+\\
+\bfseries
+viiiiel dicker text am stück
+\normalfont
+\\und wieder normal\\
+\textit{Kursiv}
+\\
+\textsc{Kapital}
+\\
+%logische Formatierung IST DEIN FREUND! manipulation später durch präambel
+\emph{Betoner Text}
+%lokale formatierung
+\textbf{Fetter Text}
+\textit{italic}
+\textsl{slanted}
+\textsc{Kapital}
+%unäre Formatieung
+\itshape
+sdöldfjkkglkfjgösdflfsdldsas
+\normalfont
+
+\subsection{Schriftgrößen}
+Lassen wir eigentlich so, bzw machen das wenn dan  über die Präambel.
+
+WENN man das dann doch mal macht:
+
+\tiny
+Hier steht kleiner Text, der als Schalter Aktiviert wurde.
+\Huge
+Hier knallts ordentlich laut
+\normalsize
+und hier ist wieder alles normal
+
+\section{Umgebung}
+
+Mit begin und end
+
+Innerhalb der Umgebung gelten neue Regeln
+\begin{enumerate}
+	\item
+	test
+	\item
+	test2
+\end{enumerate}
+
+\begin{itemize}
+	\item Punkte
+	\item ganz
+	\item Viele
+\end{itemize}
+
+\section{"Blöcke"}
+Tipp vom Prof:
+
+"Latex denkt in Blöcken, also Rechtecke, alles wird in Blöcken gesetzt"
+
+Dinge explizit zusammen fassen mit \{ \}
+
+Was macht denn wohl {\bf dieser Ausdruck}?
+
+Das ist Tatsächlich sehr cool
+
+\section{Quelltext Strukturierung}
+\begin{itemize}
+	\item Präambel
+	\subitem Beschreibung
+	\subitem Packages
+	\item $\backslash$input\{file\} zum "weg"sortieren
+\end{itemize}
+
+\section{Variabeln}
+\subsection{Längen}
+Auch Variablen werden in \LaTeX \ mit  Backslash $\backslash$ angeführt
+
+Beispielsweise $\backslash$setlength\{\}
+%\setlength
+
+bei $\backslash$setlength\{\} immer relative angaben
+
+Längenangaben können mit $\backslash$the angezeigt werden:
+\begin{enumerate}
+	\item
+	$\backslash$textheight : \the \textheight
+	\item
+	$\backslash$textwidth : \the \textwidth
+	\item
+	$\backslash$paperheight : \the \paperheight
+	\item
+	$\backslash$paperwidth : \the \paperwidth
+\end{enumerate}
+
+\subsection{Layout}
+Überblick mit $\backslash$layout\{\}:
+
+
+
+
+%\layout{}
+
+\subsection{Manipualtion von Variabeln}
+Überblick mit $\backslash$addtolength\{$\backslash$parindent\}:
+
+\addtolength{\parindent}{1pt}
+"In den letzten Jahren haben sich die Teilnehmerzahlen an unserer Konferenz stetig verdoppelt. Noch
+einmal mache ich das nicht mehr mit", erklärt Andreas Hofmann, Haupt-Organisator der Konferenz und
+Lehrer an der Waldschule Hatten, zum Auftakt der Veranstaltung. Der Ton etwas ironisch, und schon
+zwei Wochen nach der Konferenz berichtet er von den Planungen für das nächste Jahr. Die
+Herausforderung für eine Erweiterung der Veranstaltung sei angenommen, ein Ende sicherlich nicht in
+Sicht.
+
+\addtolength{\parindent}{1mm}
+"In den letzten Jahren haben sich die Teilnehmerzahlen an unserer Konferenz stetig verdoppelt. Noch
+einmal mache ich das nicht mehr mit", erklärt Andreas Hofmann, Haupt-Organisator der Konferenz und
+Lehrer an der Waldschule Hatten, zum Auftakt der Veranstaltung. Der Ton etwas ironisch, und schon
+zwei Wochen nach der Konferenz berichtet er von den Planungen für das nächste Jahr. Die
+Herausforderung für eine Erweiterung der Veranstaltung sei angenommen, ein Ende sicherlich nicht in
+Sicht.
+
+\addtolength{\parindent}{1cm}
+"In den letzten Jahren haben sich die Teilnehmerzahlen an unserer Konferenz stetig verdoppelt. Noch
+einmal mache ich das nicht mehr mit", erklärt Andreas Hofmann, Haupt-Organisator der Konferenz und
+Lehrer an der Waldschule Hatten, zum Auftakt der Veranstaltung. Der Ton etwas ironisch, und schon
+zwei Wochen nach der Konferenz berichtet er von den Planungen für das nächste Jahr. Die
+Herausforderung für eine Erweiterung der Veranstaltung sei angenommen, ein Ende sicherlich nicht in
+Sicht.
+
+\addtolength{\parindent}{1in}
+\begin{flushleft}
+	
+	
+	"In den letzten Jahren haben sich die Teilnehmerzahlen an unserer Konferenz stetig verdoppelt. Noch
+	einmal mache ich das nicht mehr mit", erklärt Andreas Hofmann, Haupt-Organisator der Konferenz und
+	Lehrer an der Waldschule Hatten, zum Auftakt der Veranstaltung. Der Ton etwas ironisch, und schon
+	zwei Wochen nach der Konferenz berichtet er von den Planungen für das nächste Jahr. Die
+	Herausforderung für eine Erweiterung der Veranstaltung sei angenommen, ein Ende sicherlich nicht in
+	Sicht.
+\end{flushleft}
+\subsection{Eigene Längen}
+%BEnutzen für alle wiederkehrenden Größen
+%siehe tex/befehle.tex
+%\newlength{\imgWidth}
+%\setlength{\imgWidth}{\textwidth}
+
+\subsection{Befehle}
+
+siehe befehle.tex
+
+\subsection{Zähler}
+\setlength{\parindent}{3ex}
+
+
+Es gibt einige Zähler, also quasi alles ist zählbar. Diese Können mit einigen Befehlen manipuliert werden. 
+
+
+Eigene Counter können definiert werden.
+\newcounter{eigenerCounter}
+Und gesetzt werden. 
+\setcounter{eigenerCounter}{2}
+Counter können in ihrem Aussehen manipuliert werden:
+\Roman{eigenerCounter}
+
+\begin{enumerate}
+	
+	
+	\renewcommand{\theenumi}{\alph{enumi}}
+	\item test
+	
+\end{enumerate}
+
+\begin{lstlisting}
+\setcounter{page}{26}
+\stepcounter{page}
+\newCounter{eigenerCounter}
+\setcounter{eigenerCounter}{10}
+\end{lstlisting}
+
+\section{label und Ref}
+
+Dinge können in Latex gelabelt und später referenziert werden: labelkonvention asd:fgdh
+\begin{lstlisting}
+\label{}
+\ref{}
+\end{lstlisting}
+
+
+
