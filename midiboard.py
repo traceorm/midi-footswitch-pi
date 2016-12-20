@@ -1,11 +1,10 @@
 import RPi.GPIO as GPIO #wird für die ansteuerung der pins benötigt
 import time   #wird für alles was mit zeit zu tun hat benötigt
-import rtmidi #wird für midi benötigt
-GPIO.setmode(GPIO.BCM)
+
 #GPIOs need to be setup up
+GPIO.setmode(GPIO.BCM)
 
 ### Konfiguration
-
 #Saveing GPIO Pin Nimbers for each switch here as Constant
 # switch top left to right
 S0_T = 17
@@ -54,11 +53,21 @@ GPIO.setup(PANIC, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 
 
 
+#variablen die, die aktuelle Funktionen der Schalter vorhalten
+#die idee ist im moment alle funktionen die initiert werden sollen als array zu speichern und dann in den HIT-Funktionen alle befehle aus zuführen
+#Funktionen sollen aus xml datei geladen werden
+S0_bFunctions = [0,0,0];
+S1_bFunctions = [0,0,0];
+S2_bFunctions = [0,0,0];
+S3_bFunctions = [0,0,0];
+S0_tFunctions = [0,0,0];
+S1_tFunctions = [0,0,0];
+S2_tFunctions = [0,0,0];
+S2_tFunctions = [0,0,0];
 
 
 ### Methoden, welche das Senden aufrufen
 ## werden ggf einen switch / elifchain brauchen für die bar
-
 
 #top buttons
 def s0_tHit():
