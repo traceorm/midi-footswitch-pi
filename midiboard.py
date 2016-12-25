@@ -29,19 +29,19 @@ PANIC = 8
 
 #Setting up GPIO
 #top line
-GPIO.setup(S0_T, GPIO_IN, pull_up_down=GPIO.PUD_UP)
-GPIO.setup(S1_T, GPIO_IN, pull_up_down=GPIO.PUD_UP)
-GPIO.setup(S2_T, GPIO_IN, pull_up_down=GPIO.PUD_UP)
-GPIO.setup(S3_T, GPIO_IN, pull_up_down=GPIO.PUD_UP)
-GPIO.setup(S4_T, GPIO_IN, pull_up_down=GPIO.PUD_UP)
+GPIO.setup(S0_T, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+GPIO.setup(S1_T, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+GPIO.setup(S2_T, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+GPIO.setup(S3_T, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+GPIO.setup(S4_T, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
 #bottomline
 
-GPIO.setup(S0_B, GPIO_IN, pull_up_down=GPIO.PUD_UP)
-GPIO.setup(S1_B, GPIO_IN, pull_up_down=GPIO.PUD_UP)
-GPIO.setup(S2_B, GPIO_IN, pull_up_down=GPIO.PUD_UP)
-GPIO.setup(S3_B, GPIO_IN, pull_up_down=GPIO.PUD_UP)
-GPIO.setup(S4_B, GPIO_IN, pull_up_down=GPIO.PUD_UP)
+GPIO.setup(S0_B, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+GPIO.setup(S1_B, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+GPIO.setup(S2_B, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+GPIO.setup(S3_B, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+GPIO.setup(S4_B, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
 #panic button
 #defining a panic button, which we wait for, to create a initity loop without loop //SINNVOLL DA JA REINE HARDWARE STEUERUNG
