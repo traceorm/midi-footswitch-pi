@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# coding: utf8
 import rtmidi #wird für midi benötigt
 import time
 

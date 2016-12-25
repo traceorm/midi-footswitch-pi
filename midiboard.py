@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# coding: utf8
 import RPi.GPIO as GPIO #wird für die ansteuerung der pins benötigt
 import time   #wird für alles was mit zeit zu tun hat benötigt
 import xml_reader as reader

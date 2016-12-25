@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# coding: utf8
 import xml.etree.ElementTree as ElementTree
 from midimodes import GrandmeisterMIDI
 class xmlReader:
