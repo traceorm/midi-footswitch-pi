@@ -66,104 +66,104 @@ currentFunctions = {
 
 bar1_config = reader.xml_reader(grandmeister_config_bar1.xml)
 bar1Functions = {
-	"T1" : bar1_config.getSettingsOfSwitch('T1')
-	"T2" : bar1_config.getSettingsOfSwitch('T2')
-	"T3" : bar1_config.getSettingsOfSwitch('T3')
-	"T4" : bar1_config.getSettingsOfSwitch('T4')
-	"B1" : bar1_config.getSettingsOfSwitch('B1')
-	"B2" : bar1_config.getSettingsOfSwitch('B2')
-	"B3" : bar1_config.getSettingsOfSwitch('B3')
+	"T1" : bar1_config.getSettingsOfSwitch('T1'),
+	"T2" : bar1_config.getSettingsOfSwitch('T2'),
+	"T3" : bar1_config.getSettingsOfSwitch('T3'),
+	"T4" : bar1_config.getSettingsOfSwitch('T4'),
+	"B1" : bar1_config.getSettingsOfSwitch('B1'),
+	"B2" : bar1_config.getSettingsOfSwitch('B2'),
+	"B3" : bar1_config.getSettingsOfSwitch('B3'),
 	"B4" : bar1_config.getSettingsOfSwitch('B4')
 }
 del bar1_config
 
 bar2_config = reader.xml_reader(grandmeister_config_bar2.xml)
 bar2Functions = {
-	"T1" : bar2_config.getSettingsOfSwitch('T1')
-	"T2" : bar2_config.getSettingsOfSwitch('T2')
-	"T3" : bar2_config.getSettingsOfSwitch('T3')
-	"T4" : bar2_config.getSettingsOfSwitch('T4')
-	"B1" : bar2_config.getSettingsOfSwitch('B1')
-	"B2" : bar2_config.getSettingsOfSwitch('B2')
-	"B3" : bar2_config.getSettingsOfSwitch('B3')
+	"T1" : bar2_config.getSettingsOfSwitch('T1'),
+	"T2" : bar2_config.getSettingsOfSwitch('T2'),
+	"T3" : bar2_config.getSettingsOfSwitch('T3'),
+	"T4" : bar2_config.getSettingsOfSwitch('T4'),
+	"B1" : bar2_config.getSettingsOfSwitch('B1'),
+	"B2" : bar2_config.getSettingsOfSwitch('B2'),
+	"B3" : bar2_config.getSettingsOfSwitch('B3'),
 	"B4" : bar2_config.getSettingsOfSwitch('B4')
 }
 del bar2_config
 
 bar3_config = reader.xml_reader(grandmeister_config_bar3.xml)
 bar3Functions = {
-	"T1" : bar3_config.getSettingsOfSwitch('T1')
-	"T2" : bar3_config.getSettingsOfSwitch('T2')
-	"T3" : bar3_config.getSettingsOfSwitch('T3')
-	"T4" : bar3_config.getSettingsOfSwitch('T4')
-	"B1" : bar3_config.getSettingsOfSwitch('B1')
-	"B2" : bar3_config.getSettingsOfSwitch('B2')
-	"B3" : bar3_config.getSettingsOfSwitch('B3')
+	"T1" : bar3_config.getSettingsOfSwitch('T1'),
+	"T2" : bar3_config.getSettingsOfSwitch('T2'),
+	"T3" : bar3_config.getSettingsOfSwitch('T3'),
+	"T4" : bar3_config.getSettingsOfSwitch('T4'),
+	"B1" : bar3_config.getSettingsOfSwitch('B1'),
+	"B2" : bar3_config.getSettingsOfSwitch('B2'),
+	"B3" : bar3_config.getSettingsOfSwitch('B3'),
 	"B4" : bar3_config.getSettingsOfSwitch('B4')
 }
 del bar3_config
 
 bar4_config = reader.xml_reader(grandmeister_config_bar4.xml)
 bar4Functions = {
-	"T1" : bar4_config.getSettingsOfSwitch('T1')
-	"T2" : bar4_config.getSettingsOfSwitch('T2')
-	"T3" : bar4_config.getSettingsOfSwitch('T3')
-	"T4" : bar4_config.getSettingsOfSwitch('T4')
-	"B1" : bar4_config.getSettingsOfSwitch('B1')
-	"B2" : bar4_config.getSettingsOfSwitch('B2')
-	"B3" : bar4_config.getSettingsOfSwitch('B3')
+	"T1" : bar4_config.getSettingsOfSwitch('T1'),
+	"T2" : bar4_config.getSettingsOfSwitch('T2'),
+	"T3" : bar4_config.getSettingsOfSwitch('T3'),
+	"T4" : bar4_config.getSettingsOfSwitch('T4'),
+	"B1" : bar4_config.getSettingsOfSwitch('B1'),
+	"B2" : bar4_config.getSettingsOfSwitch('B2'),
+	"B3" : bar4_config.getSettingsOfSwitch('B3'),
 	"B4" : bar4_config.getSettingsOfSwitch('B4')
 }
 del bar4_config
 
 bar5_config = reader.xml_reader(grandmeister_config_bar5.xml)
 bar5Functions = {
-	"T1" : bar5_config.getSettingsOfSwitch('T1')
-	"T2" : bar5_config.getSettingsOfSwitch('T2')
-	"T3" : bar5_config.getSettingsOfSwitch('T3')
-	"T4" : bar5_config.getSettingsOfSwitch('T4')
-	"B1" : bar5_config.getSettingsOfSwitch('B1')
-	"B2" : bar5_config.getSettingsOfSwitch('B2')
-	"B3" : bar5_config.getSettingsOfSwitch('B3')
+	"T1" : bar5_config.getSettingsOfSwitch('T1'),
+	"T2" : bar5_config.getSettingsOfSwitch('T2'),
+	"T3" : bar5_config.getSettingsOfSwitch('T3'),
+	"T4" : bar5_config.getSettingsOfSwitch('T4'),
+	"B1" : bar5_config.getSettingsOfSwitch('B1'),
+	"B2" : bar5_config.getSettingsOfSwitch('B2'),
+	"B3" : bar5_config.getSettingsOfSwitch('B3'),
 	"B4" : bar5_config.getSettingsOfSwitch('B4')
 }
 del bar5_config
 
 bar6_config = reader.xml_reader(grandmeister_config_bar6.xml)
 bar6Functions = {
-	"T1" : bar6_config.getSettingsOfSwitch('T1')
-	"T2" : bar6_config.getSettingsOfSwitch('T2')
-	"T3" : bar6_config.getSettingsOfSwitch('T3')
-	"T4" : bar6_config.getSettingsOfSwitch('T4')
-	"B1" : bar6_config.getSettingsOfSwitch('B1')
-	"B2" : bar6_config.getSettingsOfSwitch('B2')
-	"B3" : bar6_config.getSettingsOfSwitch('B3')
+	"T1" : bar6_config.getSettingsOfSwitch('T1'),
+	"T2" : bar6_config.getSettingsOfSwitch('T2'),
+	"T3" : bar6_config.getSettingsOfSwitch('T3'),
+	"T4" : bar6_config.getSettingsOfSwitch('T4'),
+	"B1" : bar6_config.getSettingsOfSwitch('B1'),
+	"B2" : bar6_config.getSettingsOfSwitch('B2'),
+	"B3" : bar6_config.getSettingsOfSwitch('B3'),
 	"B4" : bar6_config.getSettingsOfSwitch('B4')
 }
 del bar6_config
 
 bar7_config = reader.xml_reader(grandmeister_config_bar7.xml)
 bar7Functions = {
-	"T1" : bar7_config.getSettingsOfSwitch('T1')
-	"T2" : bar7_config.getSettingsOfSwitch('T2')
-	"T3" : bar7_config.getSettingsOfSwitch('T3')
-	"T4" : bar7_config.getSettingsOfSwitch('T4')
-	"B1" : bar7_config.getSettingsOfSwitch('B1')
-	"B2" : bar7_config.getSettingsOfSwitch('B2')
-	"B3" : bar7_config.getSettingsOfSwitch('B3')
+	"T1" : bar7_config.getSettingsOfSwitch('T1'),
+	"T2" : bar7_config.getSettingsOfSwitch('T2'),
+	"T3" : bar7_config.getSettingsOfSwitch('T3'),
+	"T4" : bar7_config.getSettingsOfSwitch('T4'),
+	"B1" : bar7_config.getSettingsOfSwitch('B1'),
+	"B2" : bar7_config.getSettingsOfSwitch('B2'),
+	"B3" : bar7_config.getSettingsOfSwitch('B3'),
 	"B4" : bar7_config.getSettingsOfSwitch('B4')
 }
 del bar7_config
 
 bar8_config = reader.xml_reader(grandmeister_config_bar8.xml)
 bar8Functions = {
-	"T1" : bar8_config.getSettingsOfSwitch('T1')
-	"T2" : bar8_config.getSettingsOfSwitch('T2')
-	"T3" : bar8_config.getSettingsOfSwitch('T3')
-	"T4" : bar8_config.getSettingsOfSwitch('T4')
-	"B1" : bar8_config.getSettingsOfSwitch('B1')
-	"B2" : bar8_config.getSettingsOfSwitch('B2')
-	"B3" : bar8_config.getSettingsOfSwitch('B3')
+	"T1" : bar8_config.getSettingsOfSwitch('T1'),
+	"T2" : bar8_config.getSettingsOfSwitch('T2'),
+	"T3" : bar8_config.getSettingsOfSwitch('T3'),
+	"T4" : bar8_config.getSettingsOfSwitch('T4'),
+	"B1" : bar8_config.getSettingsOfSwitch('B1'),
+	"B2" : bar8_config.getSettingsOfSwitch('B2'),
+	"B3" : bar8_config.getSettingsOfSwitch('B3'),
 	"B4" : bar8_config.getSettingsOfSwitch('B4')
 }
 del bar8_config
