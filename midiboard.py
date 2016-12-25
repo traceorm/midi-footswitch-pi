@@ -243,7 +243,7 @@ GPIO.add_event_detect(S4_B, GPIO.BOTH, callback=s4_bBoth, bouncetime=300)
 #alles interuppt gesteuert, also kann auf hardware off gewartet werden, um endlos loop zu verhindern
 
 try:
-    print "Programm ends on Panic Switch"
+    print("Programm ends on Panic Switch")
     GPIO.wait_for_edge(PANIC, GPIO.RISING)
     print "and there it is"
 except KeyboardInterrupt:
