@@ -184,7 +184,7 @@ barTooBarFunctions = {
 
 def setLEDBar():
 	## hier leds in abhängigkeit der currentBar setzen.
-
+	pass
 
 #define all interrupt funktions on GIOP level. We need two for each switches
 #since we got switches but want a button behavior / trigger on every change
