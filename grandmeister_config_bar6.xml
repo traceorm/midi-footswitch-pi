@@ -1,0 +1,34 @@
+<grandmeister>
+	<schalter number="T1">
+			<controller name="boost_on"/>
+			<controller name="reverb_on"/>
+			<controller name="reverb_volume">
+				128
+			</controller>
+			<preset>
+			4
+			</preset>	
+	</schalter>
+	<schalter number="T2">
+		
+	</schalter>
+	<schalter number="T3">
+		
+	</schalter>
+	<schalter number="T4">
+		
+		
+	</schalter>
+	<schalter number="B1">
+		
+	</schalter>
+	<schalter number="B2">
+		
+	</schalter>
+	<schalter number="B3">
+		
+	</schalter>
+	<schalter number="B4">
+		
+	</schalter>			
+</grandmeister>	
