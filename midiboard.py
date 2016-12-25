@@ -245,7 +245,7 @@ GPIO.add_event_detect(S4_B, GPIO.BOTH, callback=s4_bBoth, bouncetime=300)
 try:
     print("Programm ends on Panic Switch")
     GPIO.wait_for_edge(PANIC, GPIO.RISING)
-    print "and there it is"
+    print("and there it is")
 except KeyboardInterrupt:
     GPIO.cleanup()
 GPIO.cleanup()
