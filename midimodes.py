@@ -55,8 +55,8 @@ class GrandmeisterMIDI:
 
     def __init__(self, midi_channel, midi_device_name_part):
         self.__MIDI_CHANNEL=midi_channel
-        self.__midiout = rtmidi.MidiOut()
-        self.__available_ports = self.__midiout.get_ports()
+        self.__midiout = rtmidi.MidiOut(b'out')
+        self.__available_ports = self.__midiout.ports
         if(len(self.__available_ports) == 1):
             __midiout.open_port(0)
         else:
