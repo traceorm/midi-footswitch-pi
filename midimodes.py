@@ -69,19 +69,6 @@ class GrandmeisterMIDI:
                     pass
                     ##no port found
 
-
-    def functionResolver(self, functionList):
-        #durch alle funktionen iterieren
-        for command in functionList:
-            #if length 1 programChange
-            if(len(command)==1):
-                programChange(command[0])
-            #if length 2 controllerChange
-            if(len(command)==2):
-                controllerChange(command[0],command[1])
-            time.sleep(0.01)
-
-
     def programChange(self, number):
         #hier dann bitte den entsprechenden Befehl zusammen basteln
         statusbyte = 0xC0+(__MIDI_CHANNEL-1)
@@ -94,6 +81,17 @@ class GrandmeisterMIDI:
         databyte1 = controller
         databyte2 = value
         __midiout.send_message([statusbyte,databyte1,databyte2])
+
+    def functionResolver(self, functionList):
+        #durch alle funktionen iterieren
+        for command in functionList:
+            #if length 1 programChange
+            if(len(command)==1):
+                programChange(command[0])
+            #if length 2 controllerChange
+            if(len(command)==2):
+                controllerChange(command[0],command[1])
+            time.sleep(0.01)        
 
 
 
