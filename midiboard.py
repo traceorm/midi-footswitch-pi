@@ -45,7 +45,7 @@ GPIO.setup(S4_B, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 #defining a panic button, which we wait for, to create a initity loop without loop //SINNVOLL DA JA REINE HARDWARE STEUERUNG
 GPIO.setup(PANIC, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 
-midi = GrandmeisterMIDI(0, 'USB')
+midi = GrandmeisterMIDI(0, b'USB')
 
 #set startbar
 currentBar  = 1 
@@ -64,7 +64,7 @@ currentFunctions = {
 }
 
 
-bar1_config = reader.xml_reader(grandmeister_config_bar1.xml)
+bar1_config = reader.xmlReader('grandmeister_config_bar1.xml')
 bar1Functions = {
 	"T1" : bar1_config.getSettingsOfSwitch('T1'),
 	"T2" : bar1_config.getSettingsOfSwitch('T2'),
@@ -77,7 +77,7 @@ bar1Functions = {
 }
 del bar1_config
 
-bar2_config = reader.xml_reader(grandmeister_config_bar2.xml)
+bar2_config = reader.xmlReader('grandmeister_config_bar2.xml')
 bar2Functions = {
 	"T1" : bar2_config.getSettingsOfSwitch('T1'),
 	"T2" : bar2_config.getSettingsOfSwitch('T2'),
@@ -90,7 +90,7 @@ bar2Functions = {
 }
 del bar2_config
 
-bar3_config = reader.xml_reader(grandmeister_config_bar3.xml)
+bar3_config = reader.xmlReader('grandmeister_config_bar3.xml')
 bar3Functions = {
 	"T1" : bar3_config.getSettingsOfSwitch('T1'),
 	"T2" : bar3_config.getSettingsOfSwitch('T2'),
@@ -103,7 +103,7 @@ bar3Functions = {
 }
 del bar3_config
 
-bar4_config = reader.xml_reader(grandmeister_config_bar4.xml)
+bar4_config = reader.xmlReader('grandmeister_config_bar4.xml')
 bar4Functions = {
 	"T1" : bar4_config.getSettingsOfSwitch('T1'),
 	"T2" : bar4_config.getSettingsOfSwitch('T2'),
@@ -116,7 +116,7 @@ bar4Functions = {
 }
 del bar4_config
 
-bar5_config = reader.xml_reader(grandmeister_config_bar5.xml)
+bar5_config = reader.xmlReader('grandmeister_config_bar5.xml')
 bar5Functions = {
 	"T1" : bar5_config.getSettingsOfSwitch('T1'),
 	"T2" : bar5_config.getSettingsOfSwitch('T2'),
@@ -129,7 +129,7 @@ bar5Functions = {
 }
 del bar5_config
 
-bar6_config = reader.xml_reader(grandmeister_config_bar6.xml)
+bar6_config = reader.xmlReader('grandmeister_config_bar6.xml')
 bar6Functions = {
 	"T1" : bar6_config.getSettingsOfSwitch('T1'),
 	"T2" : bar6_config.getSettingsOfSwitch('T2'),
@@ -142,7 +142,7 @@ bar6Functions = {
 }
 del bar6_config
 
-bar7_config = reader.xml_reader(grandmeister_config_bar7.xml)
+bar7_config = reader.xmlReader('grandmeister_config_bar7.xml')
 bar7Functions = {
 	"T1" : bar7_config.getSettingsOfSwitch('T1'),
 	"T2" : bar7_config.getSettingsOfSwitch('T2'),
@@ -155,7 +155,7 @@ bar7Functions = {
 }
 del bar7_config
 
-bar8_config = reader.xml_reader(grandmeister_config_bar8.xml)
+bar8_config = reader.xmlReader('grandmeister_config_bar8.xml')
 bar8Functions = {
 	"T1" : bar8_config.getSettingsOfSwitch('T1'),
 	"T2" : bar8_config.getSettingsOfSwitch('T2'),
@@ -179,6 +179,7 @@ barTooBarFunctions = {
 	8: bar8Functions
 }
 
+currentFunctions = bar1Functions
 
 def setLEDBar():
 	## hier leds in abhängigkeit der currentBar setzen.
@@ -189,13 +190,17 @@ def setLEDBar():
 
 #top line switch interrupts
 def s0_tBoth(channel):
-	midi.functionResolver(currentFunctions[1])
+	midi.functionResolver(currentFunctions['T1'])
+	print('s0t')
 def s1_tBoth(channel):
-	midi.functionResolver(currentFunctions[2])
+	midi.functionResolver(currentFunctions['T2'])
+	print('s1t')
 def s2_tBoth(channel):
-	midi.functionResolver(currentFunctions[3])
+	midi.functionResolver(currentFunctions['T3'])
+	print('s2t')
 def s3_tBoth(channel):
-	midi.functionResolver(currentFunctions[4])
+	midi.functionResolver(currentFunctions['T4'])
+	print('s3t')
 def s4_tBoth(channel):
 	currentBar+= 1
 	if(currentBar>8):
@@ -205,13 +210,13 @@ def s4_tBoth(channel):
 
 #bottom line switch interrupts
 def s0_bBoth(chanel):
-	midi.functionResolver(currentFunctions[5])
+	midi.functionResolver(currentFunctions['T5'])
 def s1_bBoth(chanel):
-	midi.functionResolver(currentFunctions[6])
+	midi.functionResolver(currentFunctions['T6'])
 def s2_bBoth(chanel):
-	midi.functionResolver(currentFunctions[7])
+	midi.functionResolver(currentFunctions['T7'])
 def s3_bBoth(chanel):
-	midi.functionResolver(currentFunctions[8])
+	midi.functionResolver(currentFunctions['T8'])
 def s4_bBoth(chanel):
 	currentBar     -= 1
 	if(currentBar<1):

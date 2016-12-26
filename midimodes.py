@@ -60,9 +60,11 @@ class GrandmeisterMIDI:
         if(len(self.__available_ports) == 1):
             __midiout.open_port(0)
         else:
+            p = -1
             for port in self.__available_ports:
+                p += 1
                 if(port.find(midi_device_name_part)>-1):
-                    self.__midiout.open_port(name=port)
+                    self.__midiout.open_port(p)
                 else:
                     pass
                     ##no port found
