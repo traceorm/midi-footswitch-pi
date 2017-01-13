@@ -1,0 +1,82 @@
+%% Creator: Inkscape inkscape 0.91, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'diagramm_funktionen_baenke.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{466.04345607bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.65072848)%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{diagramm_funktionen_baenke.pdf}}%
+    \put(0.02597028,0.65072848){\makebox(0,0)[lb]{\smash{}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{diagramm_funktionen_baenke.pdf}}%
+    \put(0.30871352,0.61251456){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{ohne Bänke}}}%
+    \put(0.66322438,0.61503906){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{mit Bänken}}}%
+    \put(0.06122573,0.58754139){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{}}}%
+    \put(0.03438434,0.5898365){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{90}}}%
+    \put(0.03427957,0.53080116){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{80}}}%
+    \put(0.03397573,0.47093703){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{70}}}%
+    \put(0.03423766,0.41100914){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{60}}}%
+    \put(0.0340805,0.35120874){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{50}}}%
+    \put(0.03468818,0.29121713){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{40}}}%
+    \put(0.03410146,0.23186304){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{30}}}%
+    \put(0.03416432,0.17174387){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{20}}}%
+    \put(0.03337797,0.11200722){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{10}}}%
+    \put(0.06415838,0.02587686){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{1}}}%
+    \put(0.14333969,0.02587704){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{2}}}%
+    \put(0.22411485,0.02618086){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{3}}}%
+    \put(0.30358639,0.02587704){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{4}}}%
+    \put(0.38343375,0.02618086){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{5}}}%
+    \put(0.46293384,0.02618086){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{6}}}%
+    \put(0.54288019,0.02587704){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{7}}}%
+    \put(0.62269903,0.02618086){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{8}}}%
+    \put(0.70264541,0.02618086){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{9}}}%
+    \put(0.77488714,0.02618086){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{10}}}%
+    \put(0.85514274,0.02587704){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{11}}}%
+    \put(0.93502538,0.02587704){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{12}}}%
+    \put(0.01630246,0.24026614){\color[rgb]{0,0,0}\rotatebox{90}{\makebox(0,0)[lb]{\smash{Anzahl der Funktionen}}}}%
+    \put(0.40075388,0.00030391){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Anzahl der Schalter}}}%
+  \end{picture}%
+\endgroup%

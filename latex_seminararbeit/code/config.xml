@@ -1,0 +1,8 @@
+	<schalter number="T0">
+		<controller name="boost_on"/>
+		<controller name="reverb_on"/>
+		<controller name="reverb_volume">128</controller>
+		<preset>4</preset>	
+	</schalter>
+	<schalter number="T1">
+	</schalter>
