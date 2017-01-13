@@ -1,29 +1,29 @@
-import RPi.GPIO as GPIO #wird für die ansteuerung der pins benötigt
-import time   #wird für alles was mit zeit zu tun hat benötigt
+import RPi.GPIO as GPIO 
+import time
 import xml_reader as reader
 from midimodes import GrandmeisterMIDI
 
 #GPIOs need to be setup up
 GPIO.setmode(GPIO.BCM)
 
-### Konfiguration
-#Saveing GPIO Pin Nimbers for each switch here as Constant
-# switch top left to right
+
+#saveing GPIO pin numbers for each switch here as Constant
+# switches top, left to right
 S0_T = 17
 S1_T = 24
 S2_T = 11
 S3_T = 13
 S4_T = 16
 
-# switches bottom left to right
+# switches bottom, left to right
 S0_B = 3
 S1_B = 7
 S2_B = 2
 S3_B = 9
 S4_B = 18
 
-#panic button to end programm // wichtig weil hardware gesteuert
-PANIC = 8
+#
+STOP = 8
 
 #Setting up GPIO
 #top line
@@ -43,7 +43,7 @@ GPIO.setup(S4_B, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
 #panic button
 #defining a panic button, which we wait for, to create a initity loop without loop //SINNVOLL DA JA REINE HARDWARE STEUERUNG
-GPIO.setup(PANIC, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
+GPIO.setup(STOP, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 
 midi = GrandmeisterMIDI(0, b'USB')
 
@@ -53,7 +53,7 @@ currentBar  = 1
 #die idee ist im moment alle funktionen die initiert werden sollen als array zu speichern und dann in den HIT-Funktionen alle befehle aus zuführen
 #Funktionen sollen aus xml datei geladen werden
 currentFunctions = {
-	"T1" : [0,[1,2],0],
+	"T1" : [0,0,0],
 	"T2" : [0,0,0],
 	"T3" : [0,0,0],
 	"T4" : [0,0,0],
@@ -239,15 +239,9 @@ GPIO.add_event_detect(S2_B, GPIO.BOTH, callback=s2_bBoth, bouncetime=300)
 GPIO.add_event_detect(S3_B, GPIO.BOTH, callback=s3_bBoth, bouncetime=300)
 GPIO.add_event_detect(S4_B, GPIO.BOTH, callback=s4_bBoth, bouncetime=300)
 
-
-
-
-
-#alles interuppt gesteuert, also kann auf hardware off gewartet werden, um endlos loop zu verhindern
-
 try:
-    print("Programm ends on Panic Switch")
-    GPIO.wait_for_edge(PANIC, GPIO.RISING)
+    print("Programm ends on Stop Switch")
+    GPIO.wait_for_edge(STOP, GPIO.RISING)
     print("and there it is")
 except KeyboardInterrupt:
     GPIO.cleanup()

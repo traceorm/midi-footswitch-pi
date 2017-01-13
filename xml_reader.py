@@ -7,11 +7,10 @@ class xmlReader:
 	def __init__(self, configFile):
 		self.root=ElementTree.parse(configFile).getroot()
 	def getSettingsOfSwitch(self,number):
-		#create list to store settings, we are going to read
 		settings = []
-		#loop throu root looking for all 'schalter'
+		#durch root laufen und alle 'schalter' suchen
 		for schalter in self.root.findall('schalter'):
-			#if there is the schalter we are looking for
+			#falls da der gesuchte schalter bei ist
 			if(schalter.get('number') == number):
 				for preset in schalter.findall('preset'):
 					tempSettings = []
@@ -20,12 +19,10 @@ class xmlReader:
 						if s.isdigit():
 							tempSettings.append(int(s))
 					settings.append(tempSettings)
-				#loop throu all controllers
+				#durch alle controller laufen
 				for controller in schalter.findall('controller'):
-
-					#get name of controller and resolve setting-list by dictionary
+					#Name des Controllers auflösen and damit Einstellung erfahren
 					tempSettings = GrandmeisterMIDI.setting_resolver[controller.get('name')]
-
 					#if there is only one item in list
 					if(len(tempSettings)==1):
 						#look into controller and get the value as second item
